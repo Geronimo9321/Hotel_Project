@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reserva - Hotel Montaña Serena</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<header class="navbar">
+		<h1 class="logo"> Hotel Montaña Serena</h1>
+		<nav>
+			<ul class="nav-links">
+				<li><a href="../index.html">Inicio</li>
+				<li><a href="habitaciones.html">Habitaciones</li>
+				<li><a href="servicio.html">Servicios</li>
+				<li><a href="contacto.html">Contacto</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="reserva-container">
+		<h2>Formulario de Reserva</h2>
+		<form action="#" method="post">
+			<label for="nombre">Nombre completo: </label>
+			<input type="text" id="nombre" name="nombre" placeholder="Escribir Nombre y Apellido" required>
+
+			<label for="email">Correo electrónico: </label>
+			<input type="email" id="email" name="email" placeholder="Dirección de correo electrónico" required>
+
+			<label for="telefono">Teléfono: </label>
+			<input type="tel" id="telefono" name="telefono" placeholder="Ej: 1234567890" pattern="[0-9]{7,15}" title="Solo se permiten números de (7 a 15 dígitos)" required>
+
+			<label for="habitacion">Tipo de habitación: </label>
+			<select id="habitacion" name="habitacion" required>
+				<option value="">Selecciona una habitación</option>
+				<option value="suite">Suite Deluxe</option>
+				<option value="doble">Habitación Doble</option>
+				<option value="simple">Habitación Simple</option>
+			</select>
+
+			<label for="fecha">Fecha de ingreso: </label>
+			<input type="date" id="fecha" name="fecha" required>
+
+			<label for="fecha">Fecha de salida: </label>
+			<input type="date" id="fecha-salida" name="fecha" required>
+
+			<label for="comentarios">Comentarios adicionales: </label>
+			<textarea id="comentarios" name="comentarios" rows="4" placeholder="Agregar comentarios..."></textarea>
+
+			<button type="submit">Confirmar Reserva</button>
+		</form>
+		<a href="../index.html" class="volver">Volver al inicio</a>
+	</div>
+</body>
+</html>
