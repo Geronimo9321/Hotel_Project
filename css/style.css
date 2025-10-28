@@ -81,6 +81,27 @@ body {
 	background-color: #005f87;
 }
 
+.actividades {
+  text-align: center;      /* centra el h2 */
+  padding: 2rem 1rem;
+  position: relative;      /* evita que overlays de otros elementos cubran */
+  z-index: 1;
+}
+
+.actividades h2 {
+	color: white;
+}
+
+.actividades .rooms-container {
+  display: flex;
+  justify-content: center; /* centra las cards horizontalmente */
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-x: visible;     /* cambiar de auto a visible evita problemas de scroll invisible */
+  margin: 0 auto;
+}
+
+
 /* Footer */
 .footer {
 	background-color: #003049;
@@ -152,3 +173,12 @@ body {
     a.volver:hover {
       text-decoration: underline;
     }
+
+.servicios {
+  text-align: center;
+  padding: 2rem 1rem; /* opcional: mismo padding que habitaciones */
+}
+
+.servicios h2 {
+	color: white;
+}
