@@ -1,22 +1,50 @@
+// js/app.js
 document.addEventListener("DOMContentLoaded", () => {
 
   // -----------------------------
-  // 1. BOTONES "RESERVAR"
+  // Helper: detectar botón de "consultar"
+  // -----------------------------
+  function isConsultButton(button) {
+    // 1) data-action explícito
+    if (button.dataset.action && button.dataset.action.toLowerCase() === "consultar") return true;
+
+    // 2) texto del botón que contenga "consult" / "consultar"
+    const txt = (button.textContent || "").trim().toLowerCase();
+    if (txt.includes("consult")) return true;
+
+    // 3) si está dentro de una sección de servicios (id con 'servic')
+    const section = button.closest("section");
+    if (section && section.id && section.id.toLowerCase().includes("servic")) return true;
+
+    return false;
+  }
+
+  // -----------------------------
+  // 1. BOTONES "RESERVAR" / "CONSULTAR"
   // -----------------------------
   const reservarButtons = document.querySelectorAll(".btn-reservar");
 
   reservarButtons.forEach(button => {
     button.addEventListener("click", (e) => {
-      e.preventDefault(); // evita recarga
+      // evita comportamiento por defecto (submit / recarga)
+      e.preventDefault();
 
-      const confirmacion = confirm("¿Desea realizar una reserva?");
-
-      if (!confirmacion) {
-        // Si cancela, no hacemos nada
+      // Detectamos si es un botón para "consultar servicio"
+      if (isConsultButton(button)) {
+        const confirmacion = confirm("¿Desea consultar este servicio?");
+        if (confirmacion) {
+          // Redirige a la página de servicios. Ajustá la ruta si tu archivo está en otra carpeta.
+          window.location.href = "./src/servicio.html";
+        }
+        // si cancela, no hacemos nada
         return;
       }
 
-      // Extraemos el tipo de habitación (data-room o h3 del card)
+      // Si no es botón de consulta, asumimos que es un botón de reserva
+      const confirmacionReserva = confirm("¿Desea realizar una reserva?");
+      if (!confirmacionReserva) return;
+
+      // Extraemos el tipo de habitación/servicio (data-room o h3 del card)
       let room = button.dataset.room || "";
       if (!room) {
         const card = button.closest(".room-card");
@@ -34,10 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // -----------------------------
-  // 2. VALIDACIÓN TELEFONO
+  // 2. VALIDACIÓN TELEFONO (mantener)
   // -----------------------------
   const inputTelefono = document.querySelector("#telefono");
-
   if (inputTelefono) {
     inputTelefono.addEventListener("input", () => {
       inputTelefono.value = inputTelefono.value.replace(/[^0-9]/g, "");
@@ -46,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // -----------------------------
-  // 3. VALIDACIÓN DE FECHAS
+  // 3. VALIDACIÓN DE FECHAS (mantener)
   // -----------------------------
   const formReserva = document.querySelector(".reserva-container form");
   const inputIngreso = document.getElementById("fecha");         // Fecha de ingreso
@@ -97,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return { ok: true, msg: "" };
   }
 
-
   if (formReserva) {
     formReserva.addEventListener("submit", (e) => {
       const ingresoVal = inputIngreso ? inputIngreso.value.trim() : "";
@@ -120,9 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
   // -----------------------------
-  // 4. ALERTAS INMEDIATAS AL CAMBIAR FECHAS
+  // 4. ALERTAS INMEDIATAS AL CAMBIAR FECHAS (mantener)
   // -----------------------------
   function attachChangeAlerts() {
     if (!inputIngreso || !inputSalida) return;
@@ -143,4 +168,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   attachChangeAlerts();
 
-});
+}); // DOMContentLoaded
