@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Habitaciones - Hotel Montaña Serena</title>
+	<title>Habitaciones - Hotel Montaña Serena</title>
 	<link rel="icon" type="image/png" href="../img/logo.png">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/modal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 	<header class="navbar">
-		<h1 class="logo"> Hotel Montaña Serena</h1>
+		<h1 class="logo">Hotel Montaña Serena</h1>
 		<nav>
 			<ul class="nav-links">
 				<li><a href="../index.html">Inicio</a></li>
@@ -19,6 +21,7 @@
 			</ul>
 		</nav>
 	</header>
+
 	<main>
 		<section class="habitaciones" id="habitaciones">
 			<h2>Nuestras Habitaciones</h2>
@@ -29,7 +32,12 @@
 					<img src="../img/suite.png" alt="Suite Deluxe">
 					<h3>Suite Deluxe</h3>
 					<p>Amplia habitación con vista a las montañas y jacuzzi privado.</p>
-					<p class="precio"> $150 / noche</p>
+					<p>Servicios Incluidos, clientes VIP</p>
+					<p>-Traslado.</p>
+					<p>-Piscina.</p>
+					<p>-Restaurante.</p>
+					<p>-Servicio a la Habitación.</p>
+					<p>-Actividad exclusiva.</p>
 					<button class="btn-reservar" type="button" data-room="Suite Deluxe">Reservar</button>
 				</div>
 
@@ -38,7 +46,12 @@
 					<img src="../img/roomDoble.png" alt="Habitación Doble">
 					<h3>Habitación Doble</h3>
 					<p>Comodidad para dos personas, con balcón y desayuno incluido.</p>
-					<p class="precio"> $100 / noche</p>
+					<p>Servicios Incluidos, clientes Premium</p>
+					<p>-Traslado.</p>
+					<p>-Piscina.</p>
+					<p>-Restaurante.</p>
+					<p>-Servicio a la Habitación.</p>
+					<p>-Actividad exclusiva.</p>
 					<button class="btn-reservar" type="button" data-room="Habitación Doble">Reservar</button>
 				</div>
 
@@ -47,11 +60,45 @@
 					<img src="../img/roomSimple.png" alt="Habitación Simple">
 					<h3>Habitación Simple</h3>
 					<p>Ideal para una persona, equipada con todas las comodidades básicas.</p>
-					<p class="precio"> $70 / noche</p>
+					<p>Servicios Incluidos, clientes Estándar</p>
+					<p>-Traslado.</p>
+					<p>-Piscina.</p>
+					<p>-Restaurante.</p>
+					<p>-Servicio a la Habitación.</p>
+					<p>-Actividad exclusiva.</p>
 					<button class="btn-reservar" type="button" data-room="Habitación Simple">Reservar</button>
 				</div>
 			</div>
 		</section>
 	</main>
+
+	<!-- Modal -->
+	<div id="priceModal" class="modal">
+		<div class="modal-content">
+			<span class="close-btn">&times;</span>
+			<h2><i class="fas fa-receipt"></i> Detalle de Reserva</h2>
+			<p><strong>Habitación:</strong> <span id="roomName"></span></p>
+			<p><strong>Cantidad de noches:</strong> <input type="number" id="nights" min="1" value="1"></p>
+			
+			<h3>Servicios incluidos por noche:</h3>
+			<ul>
+				<li class="service base"><i class="fas fa-bed"></i> Precio base habitación <span>$150</span></li>
+				<li class="service traslado"><i class="fas fa-shuttle-space"></i> Traslado <span>$20</span></li>
+				<li class="service piscina"><i class="fas fa-swimmer"></i> Piscina <span>$15</span></li>
+				<li class="service restaurante"><i class="fas fa-utensils"></i> Restaurante <span>$30</span></li>
+				<li class="service roomService"><i class="fas fa-concierge-bell"></i> Servicio a la habitación <span>$25</span></li>
+				<li class="service activity"><i class="fas fa-mountain-sun"></i> Actividad exclusiva <span>$50</span></li>
+				<hr>
+				<li class="total-night"><strong>Precio total por noche:</strong> <strong>$<span id="pricePerNight">290</span></strong></li>
+			</ul>
+
+			<p class="total-reserva"><strong>Total de la reserva:</strong> $<span id="totalPrice">290</span></p>
+
+			<!-- Botón para confirmar reserva -->
+			<button id="confirmReserve"><i class="fas fa-check-circle"></i> Confirmar Reserva</button>
+		</div>
+	</div>
+
+	<script src="../js/modal.js" defer></script>
 </body>
 </html>

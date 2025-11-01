@@ -1,0 +1,101 @@
+/* Modal general */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 480px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  font-family: 'Arial', sans-serif;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  font-size: 16px;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="number"] {
+  width: 70px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Lista de servicios */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  align-items: center;
+  font-size: 15px;
+}
+
+ul li i {
+  margin-right: 6px;
+}
+
+/* Colores por servicio */
+.service.base { color: #1f77b4; font-weight: bold; }
+.service.traslado { color: #ff7f0e; }
+.service.piscina { color: #2ca02c; }
+.service.restaurante { color: #d62728; }
+.service.roomService { color: #9467bd; }
+.service.activity { color: #8c564b; }
+
+.total-night strong, .total-reserva strong {
+  color: #000;
+  font-size: 16px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 8px 0;
+}
