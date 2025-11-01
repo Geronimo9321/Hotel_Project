@@ -1,143 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Servicios - Hotel Montaña Serena</title>
-	<link rel="icon" type="image/png" href="../img/logo.png">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Servicios - Hotel Montaña Serena</title>
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<header class="navbar">
-		<h1 class="logo"> Hotel Montaña Serena</h1>
-		<nav>
-			<ul class="nav-links">
-				<li><a href="../index.html">Inicio</a></li>
-				<li><a href="habitaciones.html">Habitaciones</a></li>
-				<li><a href="servicio.html">Servicios</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
+  <header class="navbar">
+    <h1 class="logo"> Hotel Montaña Serena</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="servicio.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-	<main>
-		<section class="habitaciones" id="servicios">
-			<h2>Nuestros Servicios - VIP</h2>
-			
-			<div class="rooms-container">
-				
-				<!-- Traslado VIP -->
-				<div class="room-card">
-					<img src="../img/traslado.png" alt="Traslado VIP">
-					<h3>Traslado</h3>
-					<p>Servicio de transporte exclusivo desde y hacia el aeropuerto o puntos clave de la ciudad.</p>
-					<p class="precio"> $50 / traslado</p>
-					
-				</div>
+  <main>
+    <!-- VIP -->
+    <section class="habitaciones" id="servicios-vip">
+      <h2>Nuestros Servicios - VIP</h2>
 
-				<!-- Piscina VIP -->
-				<div class="room-card">
-					<img src="../img/poolVip.png" alt="Piscina VIP">
-					<h3>Piscina</h3>
-					<p>Acceso a nuestra piscina exclusiva con servicio de toalas y bebidas.</p>
-					<p class="precio"> $30 / persona</p>
-					
-				</div>
+      <div class="rooms-container">
+        <!-- Traslado VIP -->
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="vip" data-title="Traslado VIP — $50 / traslado" src="../img/traslado.png" alt="Traslado VIP">
+          </div>
+          <div class="card-content">
+            <h3>Traslado</h3>
+            <p>Servicio de transporte exclusivo desde y hacia el aeropuerto o puntos clave de la ciudad.</p>
+            <p class="precio">$50 / traslado</p>
+          </div>
+        </article>
 
-				<!-- Restaurante VIP -->
-				<div class="room-card">
-					<img src="../img/restaurante.png">
-					<h3>Restaurante</h3>
-					<p>Experiencia gastronómica de alta cocina con menú exclusivo y reservado.</p>
-					<p class="precio"> $80 / persona</p>
-					
-				</div>
+        <!-- Piscina VIP -->
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="vip" data-title="Piscina VIP — $30 / persona" src="../img/poolVip.png" alt="Piscina VIP">
+          </div>
+          <div class="card-content">
+            <h3>Piscina</h3>
+            <p>Acceso a nuestra piscina exclusiva con servicio de toallas y bebidas premium.</p>
+            <p class="precio">$30 / persona</p>
+          </div>
+        </article>
 
+        <!-- Restaurante VIP -->
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="vip" data-title="Restaurante VIP — $80 / persona" src="../img/restaurante.png" alt="Restaurante VIP">
+          </div>
+          <div class="card-content">
+            <h3>Restaurante</h3>
+            <p>Experiencia gastronómica de alta cocina con menú exclusivo y vinos seleccionados.</p>
+            <p class="precio">$80 / persona</p>
+          </div>
+        </article>
 
-				<!-- Servicio a la habitación -->
-				<div class="room-card">
-					<img src="../img/roomServicie.png" alt="Servicio a la habitación">
-					<h3>Servicio a la Habitación</h3>
-					<p>Comidas y bebidas directamente a la habitación con atención personalizada.</p>
-					<p class="precio"> $20 / pedido</p>
-					
-				</div>
-			</div>
-			
-		</section>
+        <!-- Servicio a la habitación VIP -->
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="vip" data-title="Servicio a la Habitación — $20 / pedido" src="../img/roomServicie.png" alt="Servicio a la Habitación VIP">
+          </div>
+          <div class="card-content">
+            <h3>Servicio a la Habitación</h3>
+            <p>Atención personalizada con comidas y bebidas servidas directamente en tu habitación.</p>
+            <p class="precio">$20 / pedido</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-		<section class="habitaciones" id="servicios">
-			<h2>Nuestros Servicios - Premium</h2>
+    <!-- PREMIUM -->
+    <section class="habitaciones" id="servicios-premium">
+      <h2>Nuestros Servicios - Premium</h2>
 
-			<div class="rooms-container">
+      <div class="rooms-container">
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="premium" data-title="Servicio a la Habitación — $20 / pedido" src="../img/roomServicie.png" alt="Servicio a la Habitación">
+          </div>
+          <div class="card-content">
+            <h3>Servicio a la Habitación</h3>
+            <p>Comidas y bebidas directamente a la habitación con atención personalizada.</p>
+            <p class="precio">$20 / pedido</p>
+          </div>
+        </article>
 
-				<!-- Servicio a la habitación -->
-				<div class="room-card">
-					<img src="../img/roomServicie.png" alt="Servicio a la habitación">
-					<h3>Servicio a la Habitación</h3>
-					<p>Comidas y bebidas directamente a la habitación con atención personalizada.</p>
-					<p class="precio"> $20 / pedido</p>
-					
-				</div>
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="premium" data-title="Traslado Premium — $70 / trayecto" src="../img/traslado.png" alt="Traslado Premium">
+          </div>
+          <div class="card-content">
+            <h3>Traslado</h3>
+            <p>Transporte cómodo y seguro con chofer profesional.</p>
+            <p class="precio">$70 / trayecto</p>
+          </div>
+        </article>
 
-				<!-- Traslado Premium -->
-				<div class="room-card">
-					<img src="../img/traslado.png" alt="Traslado Premium">
-					<h3>Traslado</h3>
-					<p>Transporte cómodo y seguro con chofer profesional.</p>
-					<p class="precio">$70 / trayecto</p>
-				</div>
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="premium" data-title="Piscina Climatizada — $60 / día" src="../img/premium.png" alt="Piscina Climatizada">
+          </div>
+          <div class="card-content">
+            <h3>Piscina Climatizada</h3>
+            <p>Acceso a piscina climatizada con servicio de bar.</p>
+            <p class="precio">$60 / día</p>
+          </div>
+        </article>
 
-				<!-- Piscina Premium -->
-				<div class="room-card">
-					<img src="../img/premium.png">
-					<h3>Piscina Climatizada</h3>
-					<p>Acceso a piscina climatizada con servicio de bar.</p>
-					<p class="precio">$60 / día</p>
-				</div>
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="premium" data-title="Restaurante Premium — $100 / menú" src="../img/restaurante.png" alt="Restaurante Premium">
+          </div>
+          <div class="card-content">
+            <h3>Restaurante</h3>
+            <p>Menú gourmet con opciones internacionales y vinos seleccionados.</p>
+            <p class="precio">$100 / menú</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-				<!-- Restaurante Premium -->
-				<div class="room-card">
-					<img src="../img/restaurante.png" alt="Restaurante Premium">
-					<h3>Restaurante</h3>
-					<p>Menú gourmet con opciones internacionales y vinos seleccionados.</p>
-					<p class="precio">$100 / menú</p>
-				</div>
-			</div>
-			
-		</section>
+    <!-- ESTÁNDAR -->
+    <section class="servicios" id="servicios-estandar">
+      <h2>Nuestros Servicios Estándar</h2>
 
-		<section class="servicios" id="servicios-normales">
-  			<h2> Nuestros Servicios Estándar</h2>
+      <div class="rooms-container">
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="estandar" data-title="Traslado — $30 / trayecto" src="../img/traslado.png" alt="Traslado Normal">
+          </div>
+          <div class="card-content">
+            <h3>Traslado</h3>
+            <p>Servicio de traslado compartido desde y hacia el aeropuerto.</p>
+            <p class="precio">$30 / trayecto</p>
+          </div>
+        </article>
 
-  			<div class="rooms-container">
-    			<div class="room-card">
-      				<img src="../img/traslado.png" alt="Traslado Normal">
-      				<h3>Traslado</h3>
-      				<p>Servicio de traslado compartido desde y hacia el aeropuerto.</p>
-      				<p class="precio">$30 / trayecto</p>
-    			</div>
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="estandar" data-title="Piscina — $25 / día" src="../img/piscina.png" alt="Piscina Normal">
+          </div>
+          <div class="card-content">
+            <h3>Piscina</h3>
+            <p>Acceso libre a la piscina principal del hotel.</p>
+            <p class="precio">$25 / día</p>
+          </div>
+        </article>
 
-    			<div class="room-card">
-      				<img src="../img/piscina.png" alt="Piscina Normal">
-      				<h3>Piscina</h3>
-      				<p>Acceso libre a la piscina principal del hotel.</p>
-      				<p class="precio">$25 / día</p>
-    			</div>
+        <article class="room-card">
+          <div class="card-media">
+            <img class="gallery-item" data-group="estandar" data-title="Restaurante — $60 / menú" src="../img/restaurante.png" alt="Restaurante Normal">
+          </div>
+          <div class="card-content">
+            <h3>Restaurante</h3>
+            <p>Menú completo con platos locales y bebidas sin alcohol.</p>
+            <p class="precio">$60 / menú</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    			<div class="room-card">
-      				<img src="../img/restaurante.png" alt="Restaurante Normal">
-      				<h3>Restaurante</h3>
-      				<p>Menú completo con platos locales y bebidas sin alcohol.</p>
-      				<p class="precio">$60 / menú</p>
-    			</div>
-  			</div>
-		</section>
-	</main>
-	
-	<footer class="footer">
-		<p>&copy; 2025 Hotel Montaña serena. Todos los derechos reservados.</p>
-		<p>Dirección: Av. Trentinos 123, Chaco, Argentina | Tel: +54 123456789</p>
-	</footer>
+  <footer class="footer">
+    <p>&copy; 2025 Hotel Montaña serena. Todos los derechos reservados.</p>
+    <p>Dirección: Av. Trentinos 123, Chaco, Argentina | Tel: +54 123456789</p>
+  </footer>
+
+  <!-- galería: script nuevo e independiente -->
+  <script src="../js/galeria.js"></script>
 </body>
 </html>
